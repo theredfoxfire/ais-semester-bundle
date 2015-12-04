@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+
+    <parameters>
+        <parameter key="ais_semester.semester.handler.class">Ais\SemesterBundle\Handler\SemesterHandler</parameter>
+        <parameter key="ais_semester.semester.class">Ais\SemesterBundle\Entity\Semester</parameter>
+    </parameters>
+
+    <services>
+        <service id="ais_semester.semester.handler" class="%ais_semester.semester.handler.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%ais_semester.semester.class%</argument>
+            <argument type="service" id="form.factory"></argument>
+        </service>
+    </services>
+
+</container>

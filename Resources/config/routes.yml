@@ -1,0 +1,5 @@
+ais_semester_semester:
+    type: rest
+    prefix: /v1
+    resource: Ais\SemesterBundle\Controller\SemesterController
+    name_prefix:  api_1_ # naming collision

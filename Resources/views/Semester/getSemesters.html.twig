@@ -1,0 +1,18 @@
+{% block content %}
+    <h1 class="title">{{ 'semester.list'|trans({}, 'AisSemesterBundle') }}</h1>
+
+    <ul id="semester-list">
+        {% for semester in semesters %}
+            <li>
+                <a href="{{ path('api_1_get_semester', {'id': semester.id}) }}">{{ semester.semester }}</a>
+                {#[<a href="{{ path('api_1_edit_semesters', {'id': semester.id}) }}">{{ 'semester.edit.link'|trans({}, 'AisSemesterBundle') }}</a>]#}
+                {#[<a href="{{ path('api_1_remove_semesters', {'id': semester.id}) }}">{{ 'semester.remove.link'|trans({}, 'AisSemesterBundle') }}</a>]#}
+            </li>
+        {% else %}
+            <li>{{ 'semester.list.empty'|trans({}, 'AisSemesterBundle') }}</li>
+        {% endfor %}
+    </ul>
+    <p>
+        <a href="{{ path('api_1_new_semester') }}">{{ 'semester.new.link'|trans({}, 'AisSemesterBundle') }}</a>
+    </p>
+{% endblock %}

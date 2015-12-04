@@ -1,0 +1,17 @@
+Ais\SemesterBundle\Entity\Semester:
+ type: entity
+ table: semester
+ id:
+  id: 
+   type: integer
+   generator: { strategy: AUTO }
+ fields:
+  semester:
+   type: string
+   length: 40
+  is_active:
+   type: boolean
+   nullable: true
+  is_delete:
+   type: boolean
+   nullable: true
