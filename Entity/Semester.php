@@ -113,4 +113,3 @@ class Semester implements SemesterInterface
         return $this->is_delete;
     }
 }
-

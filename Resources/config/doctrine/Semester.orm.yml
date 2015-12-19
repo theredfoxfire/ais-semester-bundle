@@ -1,6 +1,7 @@
 Ais\SemesterBundle\Entity\Semester:
  type: entity
  table: semester
+ repositoryClass: Ais\SemesterBundle\Repository\SemesterRepository
  id:
   id: 
    type: integer

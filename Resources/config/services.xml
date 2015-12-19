@@ -16,6 +16,16 @@
             <argument>%ais_semester.semester.class%</argument>
             <argument type="service" id="form.factory"></argument>
         </service>
+        <service id="ais_semester.semester.manager" class="Doctrine\ORM\EntityManager" factory-service="doctrine" factory-method="getManagerForClass">
+			<argument>%ais_semester.semester.class%</argument>
+		</service>
+        <service id="ais_semester.semester.entity" class="%ais_semester.semester.class%">
+		</service>
+        <service id="ais_semester.semester.repository" 
+			class="Ais\SemesterBundle\Repository\SemesterRepository"
+			factory-service="ais_semester.semester.manager" factory-method="getRepository">
+				<argument>%ais_semester.semester.class%</argument>
+		</service>
     </services>
 
 </container>
