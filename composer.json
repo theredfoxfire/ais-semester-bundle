@@ -1,5 +1,5 @@
 {
-    "name" : "Ais/SemesterBundle",
+    "name" : "ais/semesterbundle",
     "description" : "A bundle filled with Semester",
     "type" : "symfony-bundle",
     "authors" : [{
